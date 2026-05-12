@@ -1,0 +1,12 @@
+{
+  "name": "Mirqab-sys | نظام مرقاب الذكي",
+  "short_name": "MIRQAB",
+  "description": "المنظومة الذكية المتكاملة لقسم الحجر وسلامة الغذاء  - إدارة الإرساليات، تقييم المخاطر، والأرشفة الرقمية.",
+  "version": "3.1.0",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "theme_color": "#c8102e",
+  "background_color": "#f8fafc"
+}

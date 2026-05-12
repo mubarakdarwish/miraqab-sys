@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  --primary: #c8102e; /* Omani Red */
+  --primary-hover: #a60a22;
+  --bg-app: #f8fafc;
+  --card-bg: #ffffff;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --border-color: #f1f5f9;
+}
+
+.font-official {
+  font-family: 'Amiri', 'Times New Roman', serif;
+}
+
+.font-cairo {
+  font-family: 'Cairo', sans-serif;
+}
+
+.dark {
+  --bg-app: #0f172a;
+  --card-bg: #1e293b;
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --border-color: rgba(255, 255, 255, 0.05);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+.dark body {
+  background-color: var(--bg-app);
+  color: var(--text-main);
+}
+
+/* --- Glassmorphism Utilities --- */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.dark .glass {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-dark {
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* --- Card Styles --- */
+.card-base {
+  background-color: var(--card-bg);
+  border-radius: 1.5rem; /* rounded-3xl */
+  border: 1px solid var(--border-color);
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark .card-base {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.dark .bg-white {
+  background-color: #1e293b !important;
+}
+
+.dark .text-slate-800, .dark .text-slate-900 {
+  color: #f1f5f9 !important;
+}
+
+.dark .text-slate-600, .dark .text-slate-500 {
+  color: #cbd5e1 !important;
+}
+
+.dark .border-slate-100, .dark .border-slate-200 {
+  border-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.dark .bg-slate-50 {
+  background-color: rgba(255, 255, 255, 0.02) !important;
+}
+
+.card-base:hover {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  transform: translateY(-2px);
+}
+
+/* --- Custom Scrollbar --- */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-app);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+  border: 2px solid var(--bg-app);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+  border: 2px solid var(--bg-app);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* --- Animations --- */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 4s ease-in-out infinite;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out forwards;
+}
+
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-scale-in {
+  animation: scale-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* --- Form Elements --- */
+.input-modern {
+  background-color: #f8fafc;
+  border: 2px solid #e2e8f0;
+  border-radius: 1rem;
+  transition: all 0.2s ease;
+}
+
+.input-modern:focus {
+  background-color: #ffffff;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(200, 16, 46, 0.1);
+  outline: none;
+}
+
+/* --- Status Badges --- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(50%); }
+}
+
+.animate-marquee {
+  animation: marquee linear infinite;
+  display: flex;
+  width: max-content;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #e2e8f0;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Scroll Fade Effect */
+.scroll-fade-y {
+  mask-image: linear-gradient(to bottom, transparent 0%, black 5%, black 95%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 5%, black 95%, transparent 100%);
+}
+
+.scroll-fade-x {
+  mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+}
+
+.break-before-page {
+  page-break-before: always;
+  break-before: page;
+}
+
+@media print {
+  @page {
+    size: A4 landscape;
+    margin: 10mm;
+  }
+  body {
+    background-color: white !important;
+  }
+}
+
+/* PDF Export Mode Styles */
+.pdf-export-mode .tracking-tight,
+.pdf-export-mode .tracking-tighter,
+.pdf-export-mode .tracking-wide,
+.pdf-export-mode .tracking-wider,
+.pdf-export-mode .tracking-widest {
+  letter-spacing: normal !important;
+}
+
+.pdf-export-mode .shadow-xl,
+.pdf-export-mode .shadow-lg,
+.pdf-export-mode .shadow-md,
+.pdf-export-mode .shadow-sm,
+.pdf-export-mode .shadow {
+  box-shadow: none !important;
+}
+
+.pdf-export-mode .rounded-xl,
+.pdf-export-mode .rounded-2xl,
+.pdf-export-mode .rounded-3xl,
+.pdf-export-mode .rounded-\[1rem\],
+.pdf-export-mode .rounded-\[4rem\] {
+  border-radius: 4px !important;
+}
+
+.pdf-export-mode .bg-slate-50\/50 {
+  background-color: #f8fafc !important;
+}
+
+.pdf-export-mode table {
+  font-size: 7px !important;
+  table-layout: auto !important;
+  width: 100% !important;
+  word-break: break-word !important;
+  max-width: 100% !important;
+}
+
+.pdf-export-mode img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+.pdf-export-mode {
+  overflow: visible !important;
+  letter-spacing: normal !important;
+  word-spacing: normal !important;
+}
+
+.pdf-export-mode * {
+  letter-spacing: normal !important;
+  word-spacing: normal !important;
+}
+
+.pdf-export-mode .break-after-page {
+  page-break-after: always !important;
+}
+
+.pdf-export-mode .avoid-break {
+  page-break-inside: avoid !important;
+}
+
+.pdf-export-mode .overflow-x-auto,
+.pdf-export-mode .overflow-x-scroll {
+  overflow-x: visible !important;
+}
+
+.pdf-export-mode th, 
+.pdf-export-mode td {
+  padding: 3px !important;
+  word-wrap: break-word !important;
+  font-size: inherit !important;
+}
+
+.dashed-border {
+  background-image: linear-gradient(to right, #e2e8f0 50%, transparent 50%);
+  background-size: 10px 100%;
+  background-repeat: repeat-x;
+}

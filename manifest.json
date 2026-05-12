@@ -1,0 +1,57 @@
+
+{
+  "short_name": "MIRQAB",
+  "name": "نظام مرقاب - ميناء صحار",
+  "description": "المنظومة الذكية المتكاملة لقسم الحجر وسلامة الغذاء بميناء صحار - إدارة الإرساليات، تقييم المخاطر، والأرشفة الرقمية.",
+  "icons": [
+    {
+      "src": "https://mafwr.gov.om/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "https://www.mafwr.gov.om/images/tharawat_combine.a3b4ad46.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://www.mafwr.gov.om/images/tharawat_combine.a3b4ad46.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192",
+      "purpose": "any"
+    }
+  ],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "theme_color": "#c8102e",
+  "background_color": "#f8fafc",
+  "orientation": "any",
+  "dir": "rtl",
+  "lang": "ar",
+  "shortcuts": [
+    {
+      "name": "سجل المعاملات",
+      "short_name": "السجل",
+      "description": "الانتقال المباشر لبوابة التسجيل",
+      "url": "/#/portal",
+      "icons": [{ "src": "https://mafwr.gov.om/favicon.ico", "sizes": "192x192" }]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1280&h=720",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "لوحة التحكم"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&q=80&w=720&h=1280",
+      "sizes": "720x1280",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "واجهة الجوال"
+    }
+  ]
+}
